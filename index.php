@@ -1,27 +1,27 @@
+<?php
+include('tcpdf-library/tcpdf.php');
+
+$pageLayout = array(468,306);
+$pdf = new TCPDF('P','pt',$pageLayout, true, 'UTF-8', false);
+$pdf -> SetMargins()
+$pdf -> setPrintHeader(false);
+$pdf -> setPrintFooter(false);
+$pdf -> AddPage();
+
+$pdf->Cell(190,10,"this is a cell",1,1,'C');
+$pdf->Output();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innolead</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
-<script>
-    function test(){
-      const doc = new jsPDF({
-        orientation: "p",
-        unit: "in",
-        format: [6.5, 4.25]
-      });
-    
-    doc.text("Hello world!", 10, 10);
-    doc.save("custompdf.pdf");
-    }
-    
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innolead - PDF</title>
 </head>
-
 <body>
-    <button onclick="test()">Save PDF</button>
-    
+  test
 </body>
 </html>
